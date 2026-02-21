@@ -71,3 +71,5 @@ The dataset consists of three balanced classes:
       MFCC helps:
       * Convert raw audio into meaningful features
       * Reduce redundant information
+      * Highlight speech-relevant frequency patterns
+        Feature Explorer visualization was used to validate dataset quality and class separation.
