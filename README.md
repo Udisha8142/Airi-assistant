@@ -32,3 +32,15 @@ Audio Output
 ```
 ---
 # Repository Structure
+```
+Airi-assistant/
+│
+├── coqui-tts-synthesizer/     # Text-to-speech engine
+├── models-versioned/          # Trained wake word models
+├── Dockerfile                 # Docker deployment configuration
+├── README.md                  # Project documentation
+├── LICENSE                    # MIT License
+└── .gitignore
+```
+# Wake Word Model Development
+The wake word detection model was developed using Edge Impulse, an edge machine learning platform designed for building and deploying optimized ML models for sensor data.
