@@ -49,7 +49,7 @@ The dataset consists of three balanced classes:
 * Wake Word: "Hello Airi"
 * Unknown Words: unrelated speech such as "yes", "no", "left", etc.
 * Noise: background sounds, silence, and environmental noise
-  At least 10 minutes of wake word audio was collected to ensure reliable keyword spotting performance.
+At least 10 minutes of wake word audio was collected to ensure reliable keyword spotting performance.
   
   ## Dataset Variants
   Naive Dataset
