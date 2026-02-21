@@ -44,3 +44,28 @@ Airi-assistant/
 ```
 # Wake Word Model Development
 The wake word detection model was developed using Edge Impulse, an edge machine learning platform designed for building and deploying optimized ML models for sensor data.
+## Dataset Classes
+The dataset consists of three balanced classes:
+* Wake Word: "Hello Airi"
+* Unknown Words: unrelated speech such as "yes", "no", "left", etc.
+* Noise: background sounds, silence, and environmental noise
+  At least 10 minutes of wake word audio was collected to ensure reliable keyword spotting performance.
+  ## Dataset Variants
+  Naive Dataset
+  Includes:
+  * Real human recordings of "Hello Airi"
+  * High variance in accents, pitch, tone, and speaking style.
+  * Additional keyword spotting datasets from Edge Impulse documentation.
+    This improves real-world robustness.
+    ## Synthetic Dataset
+    The wake word dataset was synthetically generated using the Coqui TTS synthesizer located in:
+    coqui-tts-synthesizer/
+    Benefits include:
+    * Increased dataset scalability
+    * Consistent pronunciation
+    * Reduced manual data collection effort
+      # Signal Processing and Feature Extraction
+      Mel-Frequency Cepstral Coefficients (MFCC) were used for audio feature extraction.
+      MFCC helps:
+      * Convert raw audio into meaningful features
+      * Reduce redundant information
