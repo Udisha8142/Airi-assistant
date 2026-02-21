@@ -63,4 +63,69 @@ Includes:
   This improves real-world robustness.
     
 ## Synthetic Dataset
- 
+The wake word dataset was synthetically generated using the Coqui TTS synthesizer located in: coqui-tts-synthesizer/
+Benefits include: 
+* Increased dataset scalability
+* Consistent pronunciation
+* Reduced manual data collection effort
+
+---
+# Signal Processing and Feature Extraction
+Mel-Frequency Cepstral Coefficients (MFCC) were used for audio feature extraction.
+
+MFCC helps:
+* Convert raw audio into meaningful features
+* Reduce redundant information
+* Highlight speech-relevant frequency patterns
+
+Feature Explorer visualization was used to validate dataset quality and class separation.
+
+---
+# Model Training
+A neural network classifier was used to train the wake word detection model.
+
+Training included:
+* Feature extraction using MFCC
+* Neural network optimization
+* Confusion matrix analysis
+* Performance validation on unseen data
+The final model was optimized using INT8 quantization for efficient edge deployment.
+
+---
+# Model Testing and Validation
+The dataset was split into:
+* 80% training data
+* 20% testing data
+
+Testing ensured:
+* Accurate wake word detection
+* Low false positives
+* Reliable real-world performance
+
+---
+# Deployment 
+The AIRI Assistant is currently supported on Linux systems using Docker.
+
+## Requirements
+* Linux-based OS
+* Docker installed
+* Microphone access
+* Audio output device 
+
+## Running with Docker 
+Build the container: docker build -t airi-assistant .
+Run the container: docker run --device /dev/snd airi-assistant
+
+---
+# Text-to-Speech Engine
+AIRI Assistant uses Coqui TTS for speech synthesis. 
+
+Features:
+* Fully offline
+* Natural sounding voice output
+* Low latency response
+
+Directory: coqui-tts-synthesizer/
+
+---
+#
