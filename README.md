@@ -9,7 +9,6 @@ The assistant is optimized to run on resource-constrained systems while maintain
 * Fully offline wake word inference
 * Optimized INT8 quantized machine learning models
 * Synthetic and real voice training support
-* Offline text-to-speech using Coqui TTS
 * Docker-based deployment for Linux systems
 * Low memory and CPU usage
 * Modular and extensible architecture
@@ -82,15 +81,19 @@ Feature Explorer visualization was used to validate dataset quality and class se
 
 ---
 # Model Training
-A neural network classifier was used to train the wake word detection model.
+
+The wake word detection model was trained using the Edge Impulse platform, which provides an end-to-end pipeline for audio data processing, feature extraction, neural network training, and deployment optimization for edge devices.
+
+A neural network classifier was used within Edge Impulse to train the wake word detection model.
 
 Training included:
-* Feature extraction using MFCC
-* Neural network optimization
-* Confusion matrix analysis
-* Performance validation on unseen data
-The final model was optimized using INT8 quantization for efficient edge deployment.
 
+* Feature extraction using the MFCC (Mel-Frequency Cepstral Coefficients) signal processing block provided by Edge Impulse, which converts raw audio into meaningful feature representations.
+* Neural network training and optimization using Edge Impulse’s built-in classifier, enabling efficient learning of wake word patterns.
+* Confusion matrix analysis and performance metrics provided by Edge Impulse to evaluate classification accuracy and identify misclassifications.
+* Performance validation on unseen test data using Edge Impulse’s testing framework to ensure reliable real-world wake word detection.
+
+The final model was optimized using INT8 quantization through Edge Impulse’s deployment tools, ensuring efficient edge inference with low memory usage, fast execution, and minimal computational requirements.
 ---
 # Model Testing and Validation
 The dataset was split into:
