@@ -94,6 +94,7 @@ Training included:
 * Performance validation on unseen test data using Edge Impulse’s testing framework to ensure reliable real-world wake word detection.
 
 The final model was optimized using INT8 quantization through Edge Impulse’s deployment tools, ensuring efficient edge inference with low memory usage, fast execution, and minimal computational requirements.
+
 ---
 # Model Testing and Validation
 The dataset was split into:
